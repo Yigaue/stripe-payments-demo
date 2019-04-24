@@ -1,12 +1,12 @@
 <html>
 
 <head>
-  <title>Stripe Payments Demo</title>
+  <title>Dev Alert Payment</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@stripe">
-  <meta name="twitter:title" content="Stripe Payments Demo">
+  <meta name="twitter:site" content="@devalertme">
+  <meta name="twitter:title" content="DevAlert">
   <meta name="twitter:description" content="Sample store accepting universal payments on the web with Stripe Elements, Payment Request, Apple Pay, Google Pay, and the Sources API.">
   <meta name="twitter:image" content="https://stripe-payments-demo.appspot.com/images/twitter.png">
   <link rel="stylesheet" type="text/css" href="/stylesheets/store.css">
@@ -17,36 +17,36 @@
   <div id="main" class="loading">
     <header>
       <a class="shop" href="/">Stripe Payments Demo</a>
-      <a class="github" href="https://github.com/stripe/stripe-payments-demo">View on GitHub</a>
+      <!--<a class="github" href="https://github.com/stripe/stripe-payments-demo">View on GitHub</a>-->
     </header>
     <div id="checkout">
       <div id="payment-request">
         <div id="payment-request-button"></div>
       </div>
       <form id="payment-form" method="POST" action="/orders">
-        <p class="instruction">Complete your shipping and payment details below</p>
+        <p class="instruction">Complete your Payment to DevAlert Below</p>
         <section>
-          <h2>Shipping &amp; Billing Information</h2>
+          <h2>Remote Job Alert</h2>
           <fieldset class="with-state">
             <label>
               <span>Name</span>
-              <input name="name" class="field" placeholder="Jenny Rosen" required>
+              <input name="name" class="field" placeholder="Gospel Lekia" required>
             </label>
             <label>
               <span>Email</span>
-              <input name="email" type="email" class="field" placeholder="jenny@example.com" required>
+              <input name="email" type="email" class="field" placeholder="info@devalert.me" required>
             </label>
             <label>
               <span>Address</span>
-              <input name="address" class="field" placeholder="185 Berry Street Suite 550">
+              <input name="address" class="field" placeholder="Your personal address">
             </label>
             <label>
               <span>City</span>
-              <input name="city" class="field" placeholder="San Francisco">
+              <input name="city" class="field" placeholder="Abuja">
             </label>
             <label class="state">
               <span>State</span>
-              <input name="state" class="field" placeholder="CA">
+              <input name="state" class="field" placeholder="NY">
             </label>
             <label class="zip">
               <span>ZIP</span>
@@ -81,6 +81,7 @@
                   <option value="SE">Sweden</option>
                   <option value="CH">Switzerland</option>
                   <option value="GB">United Kingdom</option>
+                  option value="NG">Nigeria</option>
                   <option value="US" selected="selected">United States</option>
                 </select>
               </div>
