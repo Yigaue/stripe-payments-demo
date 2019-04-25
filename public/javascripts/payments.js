@@ -291,7 +291,7 @@
       // Confirm the PaymentIntent with the IBAN Element and additional SEPA Debit source data.
       const {error} = await stripe.createSource(iban, {
         type: 'sepa_debit',
-        currency: 'usd',
+        currency: 'eur',
         owner: {
           name,
           email,
