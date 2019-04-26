@@ -14,7 +14,7 @@ module.exports = {
   country: 'US',
 
   // Store currency.
-  currency: 'eur',
+  currency: 'usd',
 
   // Supported payment methods for the store.
   // Some payment methods support only a subset of currencies.

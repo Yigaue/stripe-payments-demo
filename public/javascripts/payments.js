@@ -270,7 +270,7 @@
     };
     // Disable the Pay button to prevent multiple click events.
     submitButton.disabled = true;
-    submitButton.textContent = 'Processing…';
+    submitButton.textContent = 'Payment Sent';
 
     if (payment === 'card') {
       // Let Stripe.js handle the confirmation of the PaymentIntent with the card Element.
@@ -291,7 +291,7 @@
       // Confirm the PaymentIntent with the IBAN Element and additional SEPA Debit source data.
       const {error} = await stripe.createSource(iban, {
         type: 'sepa_debit',
-        currency: 'eur',
+        currency: 'usd',
         owner: {
           name,
           email,
@@ -324,7 +324,7 @@
         redirect: {
           return_url: window.location.href,
         },
-        statement_descriptor: 'Stripe Payments Demo',
+        statement_descriptor: 'Devalert Agent Fees',
         metadata: {
           paymentIntent: paymentIntent.id,
         },
@@ -376,14 +376,14 @@
       mainElement.classList.remove('receiver');
       // Update the note about receipt and shipping (the payment has been fully confirmed by the bank).
       confirmationElement.querySelector('.note').innerText =
-        'We just sent your receipt to your email address, and your items will be on their way shortly.';
+        'Your Payment has been received, We just a confirmation to your email address, an agent will attend to you soon.';
       mainElement.classList.add('success');
     } else if (paymentIntent.status === 'processing') {
       // Success! Now waiting for payment confirmation. Update the interface to display the confirmation screen.
       mainElement.classList.remove('processing');
       // Update the note about receipt and shipping (the payment is not yet confirmed by the bank).
       confirmationElement.querySelector('.note').innerText =
-        'We’ll send your receipt and ship your items as soon as your payment is confirmed.';
+        'We’ll send you a a confirmation as soon as your payment is confirmed.';
       mainElement.classList.add('success');
     } else {
       // Payment has failed.
